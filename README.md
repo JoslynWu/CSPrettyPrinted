@@ -55,13 +55,13 @@
 
 代码中导入头文件，然后使用`cs_toSting`即可。
 
-```
+```Objective-C
 instance.cs_toSting;
 ```
 
 控制台：
 
-```
+```Objective-C
 po instance
 ```
 
@@ -72,14 +72,14 @@ po instance
 
 方式一、 直接将Sources文件夹下文件添加（拖入）到项目中
 
-```
+```Objective-C
 CSPrettyPrinted.h
 CSPrettyPrinted.m
 ```
 
 方式二、 CocoaPods
 
-```
+```Objective-C
 pod 'CSPrettyPrinted'
 ```
 
@@ -87,7 +87,7 @@ pod 'CSPrettyPrinted'
 
 一、如果需要在使用`%@`时打印这样的格式，可以在对应的分类中添加如下代码：
 
-```
+```Objective-C
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
     return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.cs_toSting];
 }
