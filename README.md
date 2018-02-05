@@ -12,42 +12,46 @@
 
 ```
 {
-.   numb = 2222,
-.   itemData = <6e6f726d 616c20e6 99aee980 9a>,
+.   null = <null>,
 .   normalStr = "normal 普通",
 .   arr = 
 .   [
-.   .   "1item1",
-.   .   "1元素2",
-.   .   "1item3"
-.   ]
-.   value = NSSize: {50, 50},
-.   summary = "摘要",
-.   sub = 
-.   {
-.   .   url = "https://baidu.com",
-.   .   title = "2子标题"
-.   }
-.   null = <null>,
-.   itemDictStr = "{"url": "ddd", "title": "2子标题"}",
-.   date = 2018-02-05 03:11:38 +0000,
-.   set = 
-.   (
-.   .   "22",
-.   .   "set 中文",
+.   .   "item1",
+.   .   "元素2",
+.   .   2222,
+.   .   <null>,
 .   .   {
+.   .   .   title = "1子标题",
+.   .   .   itemDictStr = "{"url": "ddd", "title": "2子标题"}",
 .   .   .   url = "https://baidu.com",
-.   .   .   title = "2子标题"
+.   .   .   sub = 
+.   .   .   {
+.   .   .   .   set = 
+.   .   .   .   (
+.   .   .   .   .   "22",
+.   .   .   .   .   "set 中文",
+.   .   .   .   .   {
+.   .   .   .   .   .   url = "https://baidu.com",
+.   .   .   .   .   .   title = "2子标题"
+.   .   .   .   .   }
+.   .   .   .   .   "11"
+.   .   .   .   )
+.   .   .   .   value = NSSize: {50, 50},
+.   .   .   .   itemData = <6e6f726d 616c20e6 99aee980 9a>,
+.   .   .   .   arr = 
+.   .   .   .   [
+.   .   .   .   .   "item1",
+.   .   .   .   .   "元素2",
+.   .   .   .   .   "item3"
+.   .   .   .   ]
+.   .   .   .   date = 2018-02-05 06:53:27 +0000
+.   .   .   }
+.   .   .   obj = <CSSimpleModel: 0x604000246ff0>
 .   .   }
-.   .   [
-.   .   .   "1item1",
-.   .   .   "1元素2",
-.   .   .   "1item3"
-.   .   ]
-.   .   "11"
-.   )
+.   ]
 .   name = "aaa",
-.   obj = <CSSimpleModel: 0x60000024bca0>
+.   numb = 2222,
+.   summary = "摘要"
 }
 ```
 
