@@ -118,10 +118,6 @@
     return [self _cs_debugDescription];
 }
 
-- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.cs_toSting];
-}
-
 @end
 
 
