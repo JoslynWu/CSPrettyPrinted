@@ -65,7 +65,7 @@ instance.cs_toSting;
 po instance
 ```
 
-注意：`instance` 可以是 `NSDictionary` 、 `NSArray` 、 `NSSet` 的实例。
+注意：`instance` 是 `NSDictionary` 、 `NSArray` 、 `NSSet` 的实例。
 
 
 ## 引入
@@ -85,10 +85,18 @@ pod 'CSPrettyPrinted'
 
 ## 其它
 
-如果需要在使用`%@`时打印这样的格式，可以在对应的分类中添加如下代码：
+一、如果需要在使用`%@`时打印这样的格式，可以在对应的分类中添加如下代码：
 
 ```
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
     return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.cs_toSting];
 }
 ```
+
+二、如果你想让所有的对象都可以使用这样打印。那么这里有一个建议：
+
+步骤：
+
+1、使用现在项目中的转模型工具，将对象转为`NSDictionary`（或者`NSArray`）。
+
+2、在`NSObject`的分类中添加类似的方法实现。
