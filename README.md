@@ -1,4 +1,4 @@
-# CSPrettyPrinted
+# CSSPrettyPrinted
 
 你是否需要一种log，
 
@@ -46,7 +46,7 @@
 .   .   .   .   ]
 .   .   .   .   date = 2018-02-05 06:53:27 +0000
 .   .   .   }
-.   .   .   obj = <CSSimpleModel: 0x604000246ff0>
+.   .   .   obj = <CSSSimpleModel: 0x604000246ff0>
 .   .   }
 .   ]
 .   name = "aaa",
@@ -58,10 +58,10 @@
 ## 使用
 
 **代码中:**
-导入头文件，然后使用`cs_debugSting`即可。
+导入头文件，然后使用`css_debugSting`即可。
 
 ```Objective-C
-instance.cs_debugSting;
+instance.css_debugSting;
 ```
 
 **控制台：**
@@ -78,14 +78,14 @@ po instance
 方式一、 直接将Sources文件夹下文件添加（拖入）到项目中
 
 ```Objective-C
-CSPrettyPrinted.h
-CSPrettyPrinted.m
+CSSPrettyPrinted.h
+CSSPrettyPrinted.m
 ```
 
 方式二、 CocoaPods
 
 ```Objective-C
-pod 'CSPrettyPrinted'
+pod 'CSSPrettyPrinted'
 ```
 
 ## 其它
@@ -94,7 +94,7 @@ pod 'CSPrettyPrinted'
 
 ```Objective-C
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.cs_debugSting];
+    return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.css_debugSting];
 }
 ```
 
