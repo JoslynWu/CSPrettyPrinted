@@ -75,7 +75,7 @@
 }
 
 - (void)testDictToString {
-    NSLog(@"---->\n%@", self.typeDict.cs_toSting);
+    NSLog(@"---->\n%@", self.typeDict.cs_debugSting);
 }
 
 

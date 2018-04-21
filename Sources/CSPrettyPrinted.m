@@ -110,7 +110,7 @@
 
 @implementation NSDictionary (CSPrettyPrinted)
 
-- (NSString *)cs_toSting {
+- (NSString *)cs_debugSting {
     return [NSObject _cs_toStringForSequence:self];
 }
 
@@ -123,7 +123,7 @@
 
 @implementation NSArray (CSPrettyPrinted)
 
-- (NSString *)cs_toSting {
+- (NSString *)cs_debugSting {
     return [NSObject _cs_toStringForSequence:self];
 }
 
@@ -136,7 +136,7 @@
 
 @implementation NSSet (CSPrettyPrinted)
 
-- (NSString *)cs_toSting {
+- (NSString *)cs_debugSting {
     return [NSObject _cs_toStringForSequence:self];
 }
 

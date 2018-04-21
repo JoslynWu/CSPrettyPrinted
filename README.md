@@ -57,13 +57,14 @@
 
 ## 使用
 
-代码中导入头文件，然后使用`cs_toSting`即可。
+**代码中:**
+导入头文件，然后使用`cs_debugSting`即可。
 
 ```Objective-C
-instance.cs_toSting;
+instance.cs_debugSting;
 ```
 
-控制台：
+**控制台：**
 
 ```Objective-C
 po instance
@@ -93,7 +94,7 @@ pod 'CSPrettyPrinted'
 
 ```Objective-C
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.cs_toSting];
+    return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.cs_debugSting];
 }
 ```
 
