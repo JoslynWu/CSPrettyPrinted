@@ -1,35 +1,35 @@
 //
-//  CSPrettyPrintedTests.m
-//  CSPrettyPrintedTests
+//  CSSPrettyPrintedTests.m
+//  CSSPrettyPrintedTests
 //
 //  Created by Joslyn Wu on 2018/2/5.
 //  Copyright © 2018年 Joslyn Wu. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "CSPrettyPrinted.h"
+#import "CSSPrettyPrinted.h"
 
-@interface CSSimpleSubModel : NSObject
+@interface CSSSimpleSubModel : NSObject
 @property (nonatomic, copy) NSString *subName;
 @property (nonatomic, copy) NSString *subUid;
 @property (nonatomic, copy) NSString *subSummary;
 @end
 
-@implementation CSSimpleSubModel
+@implementation CSSSimpleSubModel
 @end
 
-@interface CSSimpleModel : NSObject
+@interface CSSSimpleModel : NSObject
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *summary;
-@property (nonatomic, strong) CSSimpleSubModel *subModel;
+@property (nonatomic, strong) CSSSimpleSubModel *subModel;
 @end
 
-@implementation CSSimpleModel
+@implementation CSSSimpleModel
 @end
 
 
-@interface CSPrettyPrintedTests : XCTestCase
+@interface CSSPrettyPrintedTests : XCTestCase
 
 @property (nonatomic, strong) NSSet *set;
 @property (nonatomic, strong) NSArray *arr;
@@ -38,7 +38,7 @@
 
 @end
 
-@implementation CSPrettyPrintedTests
+@implementation CSSPrettyPrintedTests
 
 - (void)setUp {
     [super setUp];
@@ -53,7 +53,7 @@
     NSArray *arr1 = @[@"1item1", @"1元素2", @"1item3"];
     NSDictionary *subDict2 = @{@"url": @"https://baidu.com", @"title": @"2子标题"};
     NSSet *set = [NSSet setWithObjects:@"11", @"22", @"set 中文", subDict2, arr1, nil];
-    CSSimpleModel *obj = [CSSimpleModel new];
+    CSSSimpleModel *obj = [CSSSimpleModel new];
     NSDictionary *subDict1 = @{@"url": @"https://baidu.com", @"title": @"1子标题", @"sub2": subDict2, @"sub22": subDict2};
     NSArray *arr = @[@"item1", @"元素2", @"item3", numb, null, subDict1, arr1];
     NSDictionary *subDict0 = @{@"url": @"https://baidu.com", @"title": @"0子标题", @"sub1": subDict1, @"arr": arr, @"set": set};
@@ -75,7 +75,7 @@
 }
 
 - (void)testDictToString {
-    NSLog(@"---->\n%@", self.typeDict.cs_debugSting);
+    NSLog(@"---->\n%@", self.typeDict.css_debugSting);
 }
 
 

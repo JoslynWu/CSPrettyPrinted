@@ -1,22 +1,22 @@
 //
-//  CSPrettyPrinted.m
-//  CSPrettyPrinted
+//  CSSPrettyPrinted.m
+//  CSSPrettyPrinted
 //
 //  Created by Joslyn Wu on 2018/2/2.
 //  Copyright © 2018年 joslyn. All rights reserved.
 //
-// https://github.com/JoslynWu/CSPrettyPrinted
+// https://github.com/JoslynWu/CSSPrettyPrinted
 //
 
-#import "CSPrettyPrinted.h"
+#import "CSSPrettyPrinted.h"
 
-@implementation NSObject (CSPrettyPrinted)
+@implementation NSObject (CSSPrettyPrinted)
 
-+ (NSString *)_cs_toStringForSequence:(NSObject *)data {
-    return [self _cs_stringForSequence:data indentLevel:1 wrap:YES];
++ (NSString *)_css_toStringForSequence:(NSObject *)data {
+    return [self _css_stringForSequence:data indentLevel:1 wrap:YES];
 }
 
-+ (NSString *)_cs_stringForSequence:(NSObject *)data indentLevel:(NSInteger)level wrap:(BOOL)wrap {
++ (NSString *)_css_stringForSequence:(NSObject *)data indentLevel:(NSInteger)level wrap:(BOOL)wrap {
     NSString *endSymbol = @"";
     NSArray *sequence;
     NSString *startSymbol = @"";
@@ -35,8 +35,8 @@
     } else {
         return nil;
     }
-    NSString *indent = [self _cs_placeholder:@" " tag:@"." base:4 repeat:level level:level];
-    NSString *endIndent = [self _cs_placeholder:@" " tag:@"." base:4 repeat:level - 1 level:level - 1];
+    NSString *indent = [self _css_placeholder:@" " tag:@"." base:4 repeat:level level:level];
+    NSString *endIndent = [self _css_placeholder:@" " tag:@"." base:4 repeat:level - 1 level:level - 1];
     NSString *wrapStr = [NSString stringWithFormat:@"%@%@", (wrap ? @"\n" : @""), (wrap ? indent : @"")];
     if (![data isKindOfClass:[NSDictionary class]]) {
         wrapStr = @"";
@@ -49,15 +49,15 @@
         }
         NSString *obj = [sequence objectAtIndex:i];
         if ([obj isKindOfClass:[NSArray class]]) {
-            [result appendFormat:@"%@%@%@%@", indent, key, wrapStr, [self _cs_stringForSequence:obj indentLevel:level + 1 wrap:wrap]];
+            [result appendFormat:@"%@%@%@%@", indent, key, wrapStr, [self _css_stringForSequence:obj indentLevel:level + 1 wrap:wrap]];
             continue;
         }
         if ([obj isKindOfClass:[NSSet class]]) {
-            [result appendFormat:@"%@%@%@%@", indent, key, wrapStr,  [self _cs_stringForSequence:obj indentLevel:level + 1 wrap:wrap]];
+            [result appendFormat:@"%@%@%@%@", indent, key, wrapStr,  [self _css_stringForSequence:obj indentLevel:level + 1 wrap:wrap]];
             continue;
         }
         if ([obj isKindOfClass:[NSDictionary class]]) {
-            [result appendFormat:@"%@%@%@%@", indent, key, wrapStr, [self _cs_stringForSequence:(NSDictionary *)obj indentLevel:level + 1 wrap:wrap]];
+            [result appendFormat:@"%@%@%@%@", indent, key, wrapStr, [self _css_stringForSequence:(NSDictionary *)obj indentLevel:level + 1 wrap:wrap]];
             continue;
         }
         NSString *objStr = ([obj isKindOfClass:[NSString class]] ? [NSString stringWithFormat:@"\"%@\"", obj] : obj.description);
@@ -68,7 +68,7 @@
     return result;
 }
 
-+ (NSString *)_cs_placeholder:(NSString *)symbol tag:(NSString *)tag base:(NSInteger)n repeat:(NSInteger)repeat level:(NSInteger)level {
++ (NSString *)_css_placeholder:(NSString *)symbol tag:(NSString *)tag base:(NSInteger)n repeat:(NSInteger)repeat level:(NSInteger)level {
     if (n <= 0 ) {
         return @"";
     }
@@ -101,47 +101,47 @@
     return result;
 }
 
-- (NSString *)_cs_debugDescription {
-    return [NSString stringWithFormat:@"<%@: %p>\n%@",NSStringFromClass([self class]), self, [NSObject _cs_toStringForSequence:self]];
+- (NSString *)_css_debugDescription {
+    return [NSString stringWithFormat:@"<%@: %p>\n%@",NSStringFromClass([self class]), self, [NSObject _css_toStringForSequence:self]];
 }
 
 @end
 
 
-@implementation NSDictionary (CSPrettyPrinted)
+@implementation NSDictionary (CSSPrettyPrinted)
 
-- (NSString *)cs_debugSting {
-    return [NSObject _cs_toStringForSequence:self];
+- (NSString *)css_debugSting {
+    return [NSObject _css_toStringForSequence:self];
 }
 
 - (NSString *)debugDescription {
-    return [self _cs_debugDescription];
+    return [self _css_debugDescription];
 }
 
 @end
 
 
-@implementation NSArray (CSPrettyPrinted)
+@implementation NSArray (CSSPrettyPrinted)
 
-- (NSString *)cs_debugSting {
-    return [NSObject _cs_toStringForSequence:self];
+- (NSString *)css_debugSting {
+    return [NSObject _css_toStringForSequence:self];
 }
 
 - (NSString *)debugDescription {
-    return [self _cs_debugDescription];
+    return [self _css_debugDescription];
 }
 
 @end
 
 
-@implementation NSSet (CSPrettyPrinted)
+@implementation NSSet (CSSPrettyPrinted)
 
-- (NSString *)cs_debugSting {
-    return [NSObject _cs_toStringForSequence:self];
+- (NSString *)css_debugSting {
+    return [NSObject _css_toStringForSequence:self];
 }
 
 - (NSString *)debugDescription {
-    return [self _cs_debugDescription];
+    return [self _css_debugDescription];
 }
 
 @end

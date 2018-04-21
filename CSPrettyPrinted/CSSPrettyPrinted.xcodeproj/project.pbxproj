@@ -14,7 +14,7 @@
 		9E070E592027FA15008D1702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E070E572027FA15008D1702 /* LaunchScreen.storyboard */; };
 		9E070E5C2027FA15008D1702 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E070E5B2027FA15008D1702 /* main.m */; };
 		9E070E662027FA15008D1702 /* CSPrettyPrintedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E070E652027FA15008D1702 /* CSPrettyPrintedTests.m */; };
-		9E070E732027FB5A008D1702 /* CSPrettyPrinted.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E070E712027FB5A008D1702 /* CSPrettyPrinted.m */; };
+		9E070E732027FB5A008D1702 /* CSSPrettyPrinted.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E070E712027FB5A008D1702 /* CSSPrettyPrinted.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E070E492027FA15008D1702 /* CSPrettyPrinted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSPrettyPrinted.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E070E492027FA15008D1702 /* CSSPrettyPrinted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSSPrettyPrinted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E070E4C2027FA15008D1702 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E070E4D2027FA15008D1702 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9E070E4F2027FA15008D1702 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -38,11 +38,11 @@
 		9E070E582027FA15008D1702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E070E5A2027FA15008D1702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E070E5B2027FA15008D1702 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9E070E612027FA15008D1702 /* CSPrettyPrintedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSPrettyPrintedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E070E612027FA15008D1702 /* CSSPrettyPrintedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSSPrettyPrintedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E070E652027FA15008D1702 /* CSPrettyPrintedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSPrettyPrintedTests.m; sourceTree = "<group>"; };
 		9E070E672027FA15008D1702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E070E712027FB5A008D1702 /* CSPrettyPrinted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrettyPrinted.m; sourceTree = "<group>"; };
-		9E070E722027FB5A008D1702 /* CSPrettyPrinted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrettyPrinted.h; sourceTree = "<group>"; };
+		9E070E712027FB5A008D1702 /* CSSPrettyPrinted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSPrettyPrinted.m; sourceTree = "<group>"; };
+		9E070E722027FB5A008D1702 /* CSSPrettyPrinted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSPrettyPrinted.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 		9E070E4A2027FA15008D1702 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E070E492027FA15008D1702 /* CSPrettyPrinted.app */,
-				9E070E612027FA15008D1702 /* CSPrettyPrintedTests.xctest */,
+				9E070E492027FA15008D1702 /* CSSPrettyPrinted.app */,
+				9E070E612027FA15008D1702 /* CSSPrettyPrintedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 		9E070E702027FB5A008D1702 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9E070E722027FB5A008D1702 /* CSPrettyPrinted.h */,
-				9E070E712027FB5A008D1702 /* CSPrettyPrinted.m */,
+				9E070E722027FB5A008D1702 /* CSSPrettyPrinted.h */,
+				9E070E712027FB5A008D1702 /* CSSPrettyPrinted.m */,
 			);
 			name = Sources;
 			path = ../Sources;
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9E070E482027FA15008D1702 /* CSPrettyPrinted */ = {
+		9E070E482027FA15008D1702 /* CSSPrettyPrinted */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E070E6A2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSPrettyPrinted" */;
+			buildConfigurationList = 9E070E6A2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSSPrettyPrinted" */;
 			buildPhases = (
 				9E070E452027FA15008D1702 /* Sources */,
 				9E070E462027FA15008D1702 /* Frameworks */,
@@ -132,14 +132,14 @@
 			);
 			dependencies = (
 			);
-			name = CSPrettyPrinted;
+			name = CSSPrettyPrinted;
 			productName = CSPrettyPrinted;
-			productReference = 9E070E492027FA15008D1702 /* CSPrettyPrinted.app */;
+			productReference = 9E070E492027FA15008D1702 /* CSSPrettyPrinted.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9E070E602027FA15008D1702 /* CSPrettyPrintedTests */ = {
+		9E070E602027FA15008D1702 /* CSSPrettyPrintedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E070E6D2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSPrettyPrintedTests" */;
+			buildConfigurationList = 9E070E6D2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSSPrettyPrintedTests" */;
 			buildPhases = (
 				9E070E5D2027FA15008D1702 /* Sources */,
 				9E070E5E2027FA15008D1702 /* Frameworks */,
@@ -150,9 +150,9 @@
 			dependencies = (
 				9E070E632027FA15008D1702 /* PBXTargetDependency */,
 			);
-			name = CSPrettyPrintedTests;
+			name = CSSPrettyPrintedTests;
 			productName = CSPrettyPrintedTests;
-			productReference = 9E070E612027FA15008D1702 /* CSPrettyPrintedTests.xctest */;
+			productReference = 9E070E612027FA15008D1702 /* CSSPrettyPrintedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9E070E442027FA14008D1702 /* Build configuration list for PBXProject "CSPrettyPrinted" */;
+			buildConfigurationList = 9E070E442027FA14008D1702 /* Build configuration list for PBXProject "CSSPrettyPrinted" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,8 +188,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9E070E482027FA15008D1702 /* CSPrettyPrinted */,
-				9E070E602027FA15008D1702 /* CSPrettyPrintedTests */,
+				9E070E482027FA15008D1702 /* CSSPrettyPrinted */,
+				9E070E602027FA15008D1702 /* CSSPrettyPrintedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E070E732027FB5A008D1702 /* CSPrettyPrinted.m in Sources */,
+				9E070E732027FB5A008D1702 /* CSSPrettyPrinted.m in Sources */,
 				9E070E512027FA15008D1702 /* ViewController.m in Sources */,
 				9E070E5C2027FA15008D1702 /* main.m in Sources */,
 				9E070E4E2027FA15008D1702 /* AppDelegate.m in Sources */,
@@ -239,7 +239,7 @@
 /* Begin PBXTargetDependency section */
 		9E070E632027FA15008D1702 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9E070E482027FA15008D1702 /* CSPrettyPrinted */;
+			target = 9E070E482027FA15008D1702 /* CSSPrettyPrinted */;
 			targetProxy = 9E070E622027FA15008D1702 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -404,7 +404,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joslyn.CSPrettyPrintedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSPrettyPrinted.app/CSPrettyPrinted";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSSPrettyPrinted.app/CSSPrettyPrinted";
 			};
 			name = Debug;
 		};
@@ -418,14 +418,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joslyn.CSPrettyPrintedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSPrettyPrinted.app/CSPrettyPrinted";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSSPrettyPrinted.app/CSSPrettyPrinted";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9E070E442027FA14008D1702 /* Build configuration list for PBXProject "CSPrettyPrinted" */ = {
+		9E070E442027FA14008D1702 /* Build configuration list for PBXProject "CSSPrettyPrinted" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E070E682027FA15008D1702 /* Debug */,
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E070E6A2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSPrettyPrinted" */ = {
+		9E070E6A2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSSPrettyPrinted" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E070E6B2027FA15008D1702 /* Debug */,
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E070E6D2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSPrettyPrintedTests" */ = {
+		9E070E6D2027FA15008D1702 /* Build configuration list for PBXNativeTarget "CSSPrettyPrintedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E070E6E2027FA15008D1702 /* Debug */,
