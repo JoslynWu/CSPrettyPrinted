@@ -7,6 +7,7 @@ target 'Example' do
   
   pod 'YYModel'
   pod 'MJExtension'
+  pod 'CSSModel'
   
   target 'ExampleTests' do
     inherit! :search_paths

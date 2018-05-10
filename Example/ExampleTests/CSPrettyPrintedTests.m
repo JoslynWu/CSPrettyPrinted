@@ -146,7 +146,7 @@
 
 - (void)testCSSModelToDebugSting {
     // 如果只使用YYModel、MJExtension和CSSModel中一个，则无需指定
-    NSObject.css_customToJsonObjectSelector = NSSelectorFromString(@"css_modelToJSONObject");
+    NSObject.css_customToJsonObjectSelector = NSSelectorFromString(@"css_JSONObject");
     NSString *debgugStr = self.modelObject.css_debugSting;
     XCTAssertTrue([debgugStr containsString:@"summary"]);
     XCTAssertTrue([debgugStr containsString:@"obj summary"]);
@@ -157,5 +157,10 @@
     
     NSLog(@"--CSSModel-->\n%@", debgugStr);
 }
+
+// %@的打印测试
+//- (void)testNormal {
+//    NSLog(@"---->arr:\n%@, \nset:\n%@, \ndict:\n%@, \nobjcet:\n%@", self.arr, self.set, self.dict, self.modelObject);
+//}
 
 @end

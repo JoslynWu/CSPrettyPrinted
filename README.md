@@ -55,6 +55,13 @@
 }
 ```
 
+## 功能
+
+- 支持中文打印
+- 带缩进标记
+- `po`命令默认支持
+
+
 ## 使用
 
 **代码中:**
@@ -69,8 +76,6 @@ instance.css_debugSting;
 ```Objective-C
 po instance
 ```
-
-注意：`instance` 是 `NSDictionary` 、 `NSArray` 、 `NSSet` 的实例。
 
 
 ## 引入
@@ -88,20 +93,19 @@ CSSPrettyPrinted.m
 pod 'CSSPrettyPrinted'
 ```
 
+## 说明
+
+- 如果使用了`YYModel`、`MJExtension`或者`CSSModel`，普通对象同样被支持。
+- 如果没有使用者三种转模型，那么可以通过`css_customToJsonObjectSelector`指定自定义的方式。
+
 ## 其它
 
-一、如果需要在使用`%@`时打印这样的格式，可以在对应的分类中添加如下代码：
+- 如果需要在使用`%@`时打印这样的格式，可以添加如下代码：
+`NSDictionary`、`NSArray`和`NSSet`需要添加到对应的分类中
 
 ```Objective-C
-- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    return [NSString stringWithFormat:@"\n%@\n%@", [super description], self.css_debugSting];
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p>\n%@",NSStringFromClass([self class]), self, self.css_debugSting];
 }
 ```
 
-二、如果你想让所有的对象都可以使用这样打印。那么这里有一个建议：
-
-步骤：
-
-1、使用现在项目中的转模型工具，将对象转为`NSDictionary`（或者`NSArray`）。
-
-2、在`NSObject`的分类中添加类似的方法实现。

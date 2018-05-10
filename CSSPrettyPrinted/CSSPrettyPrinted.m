@@ -14,7 +14,7 @@ static void *kCSSPrettyPrintedCustomToJsonObjectSelector = nil;
 
 FOUNDATION_STATIC_INLINE NSSet<NSString *> *_css_toJsonObjectMethod() {
     return [[NSSet alloc] initWithObjects:
-            @"css_modelToJSONObject",   // CSSModel
+            @"css_JSONObject",          // CSSModel
             @"yy_modelToJSONObject",    // YYModel
             @"mj_JSONObject",           // MJExtension
             nil];
@@ -168,6 +168,25 @@ FOUNDATION_STATIC_INLINE NSSet<NSString *> *_css_toJsonObjectMethod() {
         return [NSString stringWithFormat:@"<%@: %p>",NSStringFromClass([self class]), self];
     }
     return [NSObject _css_toStringForSequence:jsonObj];
+}
+
+@end
+
+
+@implementation NSArray (CSSPrettyPrinted)
+
+/**
+ NSArray 在 po 命令下调用
+ 
+ - WHY?
+ - 1. 如果不在此重写，则打印异常。因为NSObject里的 debugDescription 调用多次， WHY?
+ - 2. 但是同样的情况为什么没有发生在 NSSet 上？
+ - 如果你看到这里，如果你知道答案，请 issue 里指教？
+
+ @return pretty printed
+ */
+- (NSString *)debugDescription {
+    return [super debugDescription];
 }
 
 @end
