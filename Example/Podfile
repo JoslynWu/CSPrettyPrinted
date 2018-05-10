@@ -1,0 +1,16 @@
+platform :ios, '9.0'
+
+inhibit_all_warnings!
+
+target 'Example' do
+  use_frameworks!
+  
+  pod 'YYModel'
+  pod 'MJExtension'
+  
+  target 'ExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

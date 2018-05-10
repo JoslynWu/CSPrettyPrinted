@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source       = { :git => 'https://github.com/JoslynWu/CSSPrettyPrinted.git', :tag => s.version.to_s }
   s.requires_arc = true
-  s.source_files = 'Sources/*.{h,m}'
-  s.public_header_files = 'Sources/*.{h}'
+  s.source_files = 'CSSPrettyPrinted/*.{h,m}'
+  s.public_header_files = 'CSSPrettyPrinted/*.{h}'
 end
