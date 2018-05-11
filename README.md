@@ -76,6 +76,7 @@ instance.css_debugSting;
 ```Objective-C
 po instance
 ```
+仅`DEBUG`模式有效
 
 
 ## 引入
