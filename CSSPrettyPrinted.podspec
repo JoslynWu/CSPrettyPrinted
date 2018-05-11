@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CSSPrettyPrinted"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "一个带层级标记的支持中文的控制台打印。"
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }
   s.authors      = { 'Joslyn' => 'cs_joslyn@foxmail.com' }

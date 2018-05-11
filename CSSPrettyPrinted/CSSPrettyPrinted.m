@@ -134,10 +134,12 @@ FOUNDATION_STATIC_INLINE NSSet<NSString *> *_css_toJsonObjectMethod() {
 }
 
 #pragma mark - ********************* public *********************
+#ifdef DEBUG
 // auto call with po command in debug
 - (NSString *)debugDescription {
     return [NSString stringWithFormat:@"<%@: %p>\n%@",NSStringFromClass([self class]), self, self.css_debugSting];
 }
+#endif
 
 - (NSString *)css_debugSting {
     if (!self) {
@@ -173,21 +175,13 @@ FOUNDATION_STATIC_INLINE NSSet<NSString *> *_css_toJsonObjectMethod() {
 @end
 
 
+#ifdef DEBUG
 @implementation NSArray (CSSPrettyPrinted)
 
-/**
- NSArray 在 po 命令下调用
- 
- - WHY?
- - 1. 如果不在此重写，则打印异常。因为NSObject里的 debugDescription 调用多次， WHY?
- - 2. 但是同样的情况为什么没有发生在 NSSet 上？
- - 如果你看到这里，如果你知道答案，请 issue 里指教？
-
- @return pretty printed
- */
 - (NSString *)debugDescription {
     return [super debugDescription];
 }
 
 @end
+#endif
 
